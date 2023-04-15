@@ -6,6 +6,8 @@
 [[ $- != *i* ]] && return
 
 # 别名
+# 默认编辑器
+export EDITOR='nvim'
 alias ls='ls --color=auto'
 alias cnvim="chezmoi edit"
 alias update="chezmoi apply && source .bashrc"
@@ -19,8 +21,6 @@ function set_wayland_env
 	cd ${HOME}
 	# 设置语言环境为中文
 	
-	# 默认编辑器
-	export EDITOR='nvim'
 	export LANG=zh_CN.UTF-8
 	# 解决QT程序缩放问题
 	export QT_AUTO_SCREEN_SCALE_FACTOR=1
@@ -47,7 +47,7 @@ function start_hyprland
 	export XDG_SESSION_TYPE=wayland
 	export XDG_SESSION_DESKTOP=Hyprland
 	export XDG_CURRENT_DESKTOP=Hyprland
-	# 启动 Hyprland程序
+	# Boot Hyprland
 	exec Hyprland
 
 }
