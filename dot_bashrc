@@ -7,7 +7,7 @@
 
 # 别名
 alias ls='ls --color=auto'
-alias config="chezmoi"
+alias cnvim="chezmoi edit"
 
 # 默认编辑器
 export EDITOR='nvim'
