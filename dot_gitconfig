@@ -1,5 +1,6 @@
 [user]
 	name = hencter
 	email = hencter@foxmail.com
+	signingKey = 81D538F5752B31FAE6C05A4DBCF82A99415A8556
 [init]
 	defaultBranch = main
