@@ -8,6 +8,7 @@
 # 别名
 # 默认编辑器
 export EDITOR='nvim'
+export GPG_TTY=$(tty) # gpg 签名密码界面
 alias ls='ls --color=auto'
 alias cnvim="chezmoi edit"
 alias update="chezmoi apply && source .bashrc"
