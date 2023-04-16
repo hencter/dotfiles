@@ -24,8 +24,10 @@ function set_wayland_env
 	
 	export LANG=zh_CN.UTF-8
 	export LANGUAGE=zh_CN:en_US
+
 	# 解决QT程序缩放问题
 	export QT_AUTO_SCREEN_SCALE_FACTOR=1
+
 	# QT使用wayland和gtk
 	export QT_QPA_PLATFORM="wayland;xcb"
 	export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
@@ -40,6 +42,10 @@ function set_wayland_env
 	export _JAVA_AWT_WM_NONEREPARENTING=1
 	# GTK后端为 wayland和x11,优先wayland
 	export GDK_BACKEND="wayland,x11"
+
+	# Firefox
+	export MOZ_ENABLE_WAYLAND=1
+
 	# 配置 vulkan renderer
 	export WLR_RENDERER="vulkan"
 	# openglrenderer 
@@ -60,3 +66,45 @@ function start_hyprland
 
 }
 
+
+function swww_randmoize {
+
+
+# This script will randomly go through the files of a directory, setting it
+# up as the wallpaper at regular intervals
+#
+# NOTE: this script is in bash (not posix shell), because the RANDOM variable
+# we use is not defined in posix
+
+if [[ $# -lt 1 ]] || [[ ! -d $1   ]]; then
+	echo "Usage:
+	$0 <dir containg images>"
+	exit 1
+fi
+
+# Edit bellow to control the images transition
+export SWWW_TRANSITION_FPS=60
+export SWWW_TRANSITION_STEP=2
+
+# This controls (in seconds) when to switch to the next image
+INTERVAL=3
+
+while true; do
+	find "$1" \
+		| while read -r img; do
+			echo "$((RANDOM % 1000)):$img"
+		done \
+		| sort -n | cut -d':' -f2- \
+		| while read -r img; do
+			swww img "$img"
+			# sleep $INTERVAL
+		done
+done
+
+}
+
+
+function reload_waybar {
+	killall waybar
+	waybar > .config/waybar/boot.log >&1 &
+}

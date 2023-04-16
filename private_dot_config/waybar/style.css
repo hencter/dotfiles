@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-    background: rgba(21, 18, 27, 0);
+    background: rgba(70, 69, 69, 0.644);
     color: #cdd6f4;
 }
 
@@ -21,24 +21,26 @@ tooltip {
     border-color: #11111b;
 }
 
-tooltip label{
+tooltip label {
     color: #cdd6f4;
 }
 
 #workspaces button {
     padding: 5px;
-    color: #313244;
+    color: #bebebe;
     margin-right: 5px;
 }
 
 #workspaces button.active {
     color: #a6adc8;
+    background: rgba(104, 104, 104, 0.25);
+    border-radius: 5px;
 }
 
 #workspaces button.focused {
     color: #a6adc8;
     background: #eba0ac;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
 #workspaces button.urgent {
@@ -55,44 +57,38 @@ tooltip label{
 
 #custom-launch_wofi,
 #custom-lock_screen,
-#custom-light_dark,
-#custom-power_btn,
-#custom-power_profile,
-#custom-weather,
 #window,
 #cpu,
 #disk,
-#custom-updates,
 #memory,
-#clock,
 #battery,
 #pulseaudio,
 #network,
 #tray,
 #temperature,
 #workspaces,
+#clock,
 #backlight {
-    background: #1e1e2e;
+    /* background: #535370; */
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     border: 0px;
 }
 
-#tray, #custom-lock_screen, #temperature, #backlight, #custom-launch_wofi, #cpu {
+#tray {
     border-radius: 10px 0px 0px 10px;
 }
 
-#custom-light_dark, #custom-power_btn, #workspaces, #pulseaudio.microphone, #battery, #disk {
+#clock {
     border-radius: 0px 10px 10px 0px;
-    margin-right: 10px;
 }
 
+/* critical-threshold 值时显示 */
 #temperature.critical {
     color: #e92d4d;
 }
-
 
 #workspaces {
     padding-right: 0px;
@@ -114,7 +110,7 @@ tooltip label{
 #custom-launch_wofi {
     color: #89b4fa;
     margin-left: 10px;
-    border-right: 0px;
+    border-right: 10px;
 }
 
 #pulseaudio {
