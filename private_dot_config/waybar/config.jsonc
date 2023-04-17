@@ -72,7 +72,7 @@
         "format": "󰋊 {percentage_used}%",
         "path": "/",
         "tooltip": true,
-        "tooltip-format": "HDD - {used} used out of {total} on {path} ({percentage_used}%)",
+        "tooltip-format": "{used} / {total} ({percentage_used}%)",
         "on-click": "kitty --start-as=float --title btop sh -c 'btop'"
     },
     "temperature": {
