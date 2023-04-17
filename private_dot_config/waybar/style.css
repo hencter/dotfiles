@@ -8,17 +8,17 @@
 }
 
 window#waybar {
-    background: rgba(70, 69, 69, 0.644);
+    background: rgba(24, 24, 24, 0.781);
     color: #cdd6f4;
 }
 
 tooltip {
-    background: #1e1e2e;
+    background: #000000;
     opacity: 0.8;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    border-color: #11111b;
+    border-color: rgba(248, 0, 136, 0.212);
 }
 
 tooltip label {
@@ -44,15 +44,15 @@ tooltip label {
 }
 
 #workspaces button.urgent {
-    color: #11111b;
+    color: #000000;
     background: #a6e3a1;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #workspaces button:hover {
-    background: #11111b;
+    background: rgba(0, 0, 0, 0.199);
     color: #cdd6f4;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #custom-launch_wofi,

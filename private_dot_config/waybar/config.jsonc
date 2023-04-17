@@ -14,7 +14,6 @@
         "temperature",
         "clock"
     ],
-    // "modules-center": ["sway/window"],
     "modules-center": [
         "hyprland/window"
     ],
@@ -62,10 +61,11 @@
         "interval": 10,
         "format": " {usage}%",
         "max-length": 10,
-        "on-click": "kitty --start-as=fullscreen --title btm sh -c 'btm'"
+        "on-click": "kitty --start-as=maximized --title btm sh -c 'btm -b'"
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+        "on-click": "kitty --start-as=maximized --title btm sh -c 'btm -b'"
     },
     "disk": {
         "interval": 30,
@@ -73,7 +73,7 @@
         "path": "/",
         "tooltip": true,
         "tooltip-format": "HDD - {used} used out of {total} on {path} ({percentage_used}%)",
-        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+        "on-click": "kitty --start-as=float --title btop sh -c 'btop'"
     },
     "temperature": {
         "thermal-zone": 1,
@@ -143,7 +143,7 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{signalStrength} % {ifname} / {gwaddr}",
+        "tooltip-format": "{essid}: {signalStrength}% {ifname} / {gwaddr}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{essid} : {ipaddr}/{cidr}"
@@ -179,6 +179,7 @@
     }
     // /* for sway */
     // Modules configuration
+    // "modules-center": ["sway/window"],
     // "sway/workspaces": {
     //     "disable-scroll": true,
     //     "all-outputs": true,
