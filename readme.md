@@ -13,8 +13,7 @@ chezmoi init --apply hencter
 ## 依赖
 
 
-
-```
+```bash
 # gnome
 sudo pacman -S gnome
 # hyprland 
