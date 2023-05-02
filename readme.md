@@ -13,6 +13,9 @@ chezmoi init --apply hencter
 ## 依赖
 
 ```bash
+
+# First install a browse e.g. firefox
+sudo pacman -S firefox
 # Hyprland「也许可以叫做：梦幻乐园」
 sudo pacman -S hyprland community/hyprland community/xdg-desktop-portal-hyprland community/kitty
 # 显示管理器，这边建议 gdm 目前，他是 wayland 的支持比较完整的，
@@ -23,7 +26,7 @@ sudo pacman -S gdm gnome-control-center # setting
 # 系统状态查看器
 sudo pacman -S bottom
 # 应用启动器
-sudo pacman -S wofi
+sudo pacman -S wofi # hyprland default
 # 通知守护进程
 sudo pacman -S mako
 # man
