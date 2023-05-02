@@ -23,5 +23,10 @@ function swww_randmoize {
 
 function reload_waybar {
 	killall waybar
-	waybar >.config/waybar/boot.log >&1 &
+	waybar >/tmp/waybar.log >&1 &
+}
+
+function reload_hybridbar {
+	killall hybrid-bar
+	hybrid-bar >/tmp/hybrid-bar.log >&1 &
 }
