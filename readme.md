@@ -46,7 +46,6 @@ XMODIFIERS=@im=fcitx
 SDL_IM_MODULE=fcitx
 GLFW_IM_MODULE=ibus
 # 截图
-mkdir -p ~/Pictures/ScreenShot/Clipboard
 sudo pacman -S grim slurp wl-clipboard # 剪切板是为了方便图片，也是为了方便 neovim
 # 录屏，要么就是下面的这个标，要么就是 OBS-Studio
 sudo pacman -S wf-recorder
