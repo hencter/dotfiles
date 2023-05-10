@@ -23,6 +23,7 @@ function swww_randmoize {
 function reload_waybar {
 	killall waybar
 	waybar >/tmp/waybar.log >&1 &
+	notify-send "waybar reload"
 }
 
 function reload_hybridbar {
