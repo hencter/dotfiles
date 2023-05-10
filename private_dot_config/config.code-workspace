@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "hypr"
+		},
+		{
+			"path": "waybar"
 		}
 	],
 	"settings": {}
