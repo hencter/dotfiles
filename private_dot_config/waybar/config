@@ -12,16 +12,18 @@
         "memory",
         "disk",
         "temperature"
+        // "wlr/taskbar"
     ],
     "modules-center": [
         "hyprland/window"
     ],
     "modules-right": [
         "tray",
-        // "pulseaudio",
-        "wireplumber",
+        "pulseaudio",
+        // "wireplumber",
         "network",
         "backlight",
+        // "upower",
         "battery",
         "clock"
     ],
@@ -30,11 +32,11 @@
     "wlr/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "1": "",
+            "1": "",
             "2": "",
             "3": "",
             "4": "",
-            "5": "5",
+            "5": "󰚢",
             "6": "6",
             "7": "7",
             "8": "8",
@@ -50,8 +52,8 @@
         "sort-by-number": true // 目前发现如果不设置按数字排序好像第十个 activeworkspace 会跑到第二个来
     },
     "cpu": {
-        "format": "  {usage}%"
-        // "interval": 10,
+        "format": "  {usage}%",
+        "interval": 1
         // "max-length": 10
         // "tooltip": false
     },
@@ -75,15 +77,26 @@
     },
     /* modules-center */
     "hyprland/window": {},
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        // "icon-theme": "Papirus-Dark",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "kitty"
+        ]
+    },
     /* modules-right */
     "tray": {
         // "icon-size": 21,
-        "spacing": 10
+        "spacing": 15
     },
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y.%m.%d}"
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -104,27 +117,32 @@
         ]
     },
     "battery": {
+        // "bat": "BAT1",
+        "interval": 60,
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}%",
-        "format-charging": "{capacity}% 󱐋",
-        "format-plugged": "{capacity}% ",
-        "on-scroll-up": "brightnessctl -c backlight set 5%+", // need install the brightnessctl
-        "on-scroll-down": "brightnessctl -c backlight set 5%-",
-        "format-alt": " {time}",
-        "format-full": "{icon}"
+        "format": "{icon}",
+        "format-alt": "{capacity}% {power} w {time}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "max-length": 25,
+        "design-capacity": true
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{icon}",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-wifi": "{icon}（{signalStrength}%）",
+        "format-ethernet": "󰈀",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": " ",
-        "format-alt": "{signalStrength}% {essid} {ipaddr}/{cidr}",
+        "format-alt": "{essid} {ipaddr}/{cidr}",
         "format-icons": {
             "1": "󰤫",
             "default": "󰤨"
