@@ -7,7 +7,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "wlr/workspaces",
+        "hyprland/workspaces",
         "cpu",
         "memory",
         "disk",
@@ -29,14 +29,14 @@
     ],
     // Modules configuration
     /* modules-left */
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "󰚢",
+            "1": " ",
+            "2": " ",
+            "3": " ",
+            "4": " ",
+            "5": "󰚢 ",
             "6": "6",
             "7": "7",
             "8": "8",
@@ -157,16 +157,16 @@
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
             "default": [
-                "",
-                "",
-                ""
+                " ",
+                " ",
+                " "
             ]
         },
         "on-click": "pavucontrol"
