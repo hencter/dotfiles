@@ -72,7 +72,7 @@
         "critical-threshold": 80,
         "format": "{temperatureC} {icon}",
         "format-icons": [
-            "󰔄 "
+            " 󰔄"
         ]
     },
     /* modules-center */

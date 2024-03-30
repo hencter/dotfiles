@@ -1,4 +1,10 @@
+
+/*  @import "./rose-pine.css"; */
+@import "./rose-pine-moon.css";
+/* @import "./rose-pine-dawn.css"; */
+
 * {
+    background: @base;
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
