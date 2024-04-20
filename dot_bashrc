@@ -10,7 +10,8 @@
 export EDITOR='nvim'
 export GPG_TTY=$(tty) # gpg 签名密码界面
 # export HUGO_MODULE_PROXY=https://goproxy.cn
-alias ls='ls --color=auto'
+alias ls='exa'
+alias cat='bat'
 alias cnvim="chezmoi edit"
 
 # Starship 提示符
@@ -30,3 +31,5 @@ function reload_hybridbar {
 	killall hybrid-bar
 	hybrid-bar >/tmp/hybrid-bar.log >&1 &
 }
+
+eval "$(thefuck --alias)"
